@@ -31,7 +31,8 @@ const CHANNELS = [
 ];
 
 const GROUPS = ['APP', 'IG', 'Facebook', 'Threads', 'Dcard'];
-const GROUP_COLORS = { APP: '#8B9E3C', IG: '#E84073', Facebook: '#3B82F6', Threads: '#1A1A1A', Dcard: '#0E7490' };
+const GROUP_COLORS = { APP: '#C5D86D', IG: '#FFB6C1', Facebook: '#93B5E0', Threads: '#A09888', Dcard: '#A5B8C7' };
+const GROUP_TEXT_COLORS = { APP: '#3D4A1C', IG: '#7A2836', Facebook: '#1E3A5F', Threads: '#333333', Dcard: '#2C4A5A' };
 
 const MONTH_TARGETS = { 4: 200, 5: 700, 6: 800 };
 const WEEKLY_TARGETS = {
@@ -385,7 +386,7 @@ export default function Home() {
               <div key={group}>
                 {/* Group header */}
                 <div className="channel-group-header">
-                  <div className="group-label" style={{background: GROUP_COLORS[group]}} onClick={() => !isSingle && toggleGroup(group)}>
+                  <div className="group-label" style={{background: GROUP_COLORS[group], color: GROUP_TEXT_COLORS[group]}} onClick={() => !isSingle && toggleGroup(group)}>
                     {!isSingle && <span className={`arrow ${isCollapsed ? 'collapsed' : ''}`}>▼</span>}
                     {group}
                   </div>
