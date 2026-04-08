@@ -86,12 +86,11 @@ body {
 /* Timeline Grid */
 .timeline-wrapper {
   overflow-x: auto;
-  padding: 16px;
+  padding: 0;
 }
 
 .timeline {
   display: grid;
-  min-width: 1400px;
   border-collapse: collapse;
 }
 
@@ -101,8 +100,8 @@ body {
 
 .month-row {
   display: grid;
-  grid-template-columns: 160px repeat(12, 1fr);
-  gap: 1px;
+  grid-template-columns: 140px repeat(12, calc((100vw - 140px) / 4));
+  gap: 0;
 }
 
 .month-label {
@@ -111,7 +110,7 @@ body {
   font-size: 14px;
   color: white;
   text-align: center;
-  border-radius: 6px 6px 0 0;
+  border-radius: 0;
 }
 
 .month-label.apr { background: #7B9E3C; }
@@ -120,8 +119,8 @@ body {
 
 .week-row {
   display: grid;
-  grid-template-columns: 160px repeat(12, 1fr);
-  gap: 1px;
+  grid-template-columns: 140px repeat(12, calc((100vw - 140px) / 4));
+  gap: 0;
 }
 
 .week-label {
@@ -152,13 +151,16 @@ body {
   padding: 6px 12px;
   font-weight: 700;
   font-size: 13px;
+  position: sticky;
+  left: 0;
+  z-index: 10;
 }
 
 /* Channel rows */
 .channel-group-header {
   display: grid;
-  grid-template-columns: 160px repeat(12, 1fr);
-  gap: 1px;
+  grid-template-columns: 140px repeat(12, calc((100vw - 140px) / 4));
+  gap: 0;
 }
 
 .group-label {
@@ -180,10 +182,16 @@ body {
 
 .group-label .arrow.collapsed { transform: rotate(-90deg); }
 
+.group-label {
+  position: sticky;
+  left: 0;
+  z-index: 10;
+}
+
 .channel-row {
   display: grid;
-  grid-template-columns: 160px repeat(12, 1fr);
-  gap: 1px;
+  grid-template-columns: 140px repeat(12, calc((100vw - 140px) / 4));
+  gap: 0;
 }
 
 .channel-label {
@@ -195,6 +203,9 @@ body {
   display: flex;
   align-items: flex-start;
   min-height: 60px;
+  position: sticky;
+  left: 0;
+  z-index: 10;
 }
 
 .channel-label .dot {
@@ -238,18 +249,6 @@ body {
 .task-card:hover {
   border-color: var(--buzzer-green);
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-}
-
-.task-card.completed {
-  opacity: 0.5;
-  text-decoration: line-through;
-}
-
-.task-card input[type="checkbox"] {
-  margin-top: 2px;
-  flex-shrink: 0;
-  cursor: pointer;
-  accent-color: var(--buzzer-green);
 }
 
 .task-card .task-title {

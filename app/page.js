@@ -396,9 +396,8 @@ export default function Home() {
                       return (
                         <div key={w.num} className={`task-cell ${w.num === currentWeek ? 'current-week' : ''}`}>
                           {cellTasks.map(task => (
-                            <div key={task.id} className={`task-card ${task.completed ? 'completed' : ''}`}>
-                              <input type="checkbox" checked={task.completed} onChange={() => toggleTask(task.id)} />
-                              <span className="task-title" onClick={() => editTask(task)}>{task.title}</span>
+                            <div key={task.id} className="task-card" onClick={() => editTask(task)}>
+                              <span className="task-title">{task.title}</span>
                             </div>
                           ))}
                           <button className="add-task-btn" onClick={() => addTask(w.num, groupChannels[0].id)}>+ 新增</button>
@@ -408,10 +407,9 @@ export default function Home() {
                   ) : (
                     WEEKS.map(w => {
                       const allTasks = groupChannels.flatMap(c => getTasksForCell(w.num, c.id));
-                      const done = allTasks.filter(t => t.completed).length;
                       return (
                         <div key={w.num} className={`task-cell ${w.num === currentWeek ? 'current-week' : ''}`} style={{fontSize: 11, color: '#888', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                          {allTasks.length > 0 && `${done}/${allTasks.length}`}
+                          {allTasks.length > 0 && `${allTasks.length} 項`}
                         </div>
                       );
                     })
@@ -430,9 +428,8 @@ export default function Home() {
                       return (
                         <div key={w.num} className={`task-cell ${w.num === currentWeek ? 'current-week' : ''}`}>
                           {cellTasks.map(task => (
-                            <div key={task.id} className={`task-card ${task.completed ? 'completed' : ''}`}>
-                              <input type="checkbox" checked={task.completed} onChange={() => toggleTask(task.id)} />
-                              <span className="task-title" onClick={() => editTask(task)}>{task.title}</span>
+                            <div key={task.id} className="task-card" onClick={() => editTask(task)}>
+                              <span className="task-title">{task.title}</span>
                             </div>
                           ))}
                           <button className="add-task-btn" onClick={() => addTask(w.num, ch.id)}>+</button>
