@@ -1,12 +1,12 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-  --buzzer-green: #7B9E3C;
+  --buzzer-green: #8B9E3C;
   --buzzer-light: #f0f4e8;
-  --ig-pink: #E1306C;
-  --fb-blue: #1877F2;
+  --ig-pink: #E84073;
+  --fb-blue: #3B82F6;
   --threads-black: #1A1A1A;
-  --dcard-blue: #006AA6;
+  --dcard-blue: #0E7490;
   --bg: #f5f5f0;
   --card: #ffffff;
   --border: #e0e0e0;

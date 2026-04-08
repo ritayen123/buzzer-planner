@@ -17,21 +17,21 @@ const WEEKS = [
 ];
 
 const CHANNELS = [
-  { id: 'app-push', name: 'PUSH 推播', group: 'APP', color: '#7B9E3C' },
-  { id: 'app-banner', name: 'Banner', group: 'APP', color: '#7B9E3C' },
-  { id: 'app-task', name: '上架任務', group: 'APP', color: '#7B9E3C' },
-  { id: 'app-shop', name: '商城商品', group: 'APP', color: '#7B9E3C' },
-  { id: 'app-game', name: '遊戲', group: 'APP', color: '#7B9E3C' },
-  { id: 'app-code', name: '序號發放', group: 'APP', color: '#7B9E3C' },
-  { id: 'ig-post', name: '貼文', group: 'IG', color: '#E1306C' },
-  { id: 'ig-story', name: 'Story', group: 'IG', color: '#E1306C' },
-  { id: 'facebook', name: 'Facebook', group: 'Facebook', color: '#1877F2' },
+  { id: 'app-push', name: 'PUSH 推播', group: 'APP', color: '#8B9E3C' },
+  { id: 'app-banner', name: 'Banner', group: 'APP', color: '#8B9E3C' },
+  { id: 'app-task', name: '上架任務', group: 'APP', color: '#8B9E3C' },
+  { id: 'app-shop', name: '商城商品', group: 'APP', color: '#8B9E3C' },
+  { id: 'app-game', name: '遊戲', group: 'APP', color: '#8B9E3C' },
+  { id: 'app-code', name: '序號發放', group: 'APP', color: '#8B9E3C' },
+  { id: 'ig-post', name: '貼文', group: 'IG', color: '#E84073' },
+  { id: 'ig-story', name: 'Story', group: 'IG', color: '#E84073' },
+  { id: 'facebook', name: 'Facebook', group: 'Facebook', color: '#3B82F6' },
   { id: 'threads', name: 'Threads', group: 'Threads', color: '#1A1A1A' },
-  { id: 'dcard', name: 'Dcard', group: 'Dcard', color: '#006AA6' },
+  { id: 'dcard', name: 'Dcard', group: 'Dcard', color: '#0E7490' },
 ];
 
 const GROUPS = ['APP', 'IG', 'Facebook', 'Threads', 'Dcard'];
-const GROUP_COLORS = { APP: '#7B9E3C', IG: '#E1306C', Facebook: '#1877F2', Threads: '#1A1A1A', Dcard: '#006AA6' };
+const GROUP_COLORS = { APP: '#8B9E3C', IG: '#E84073', Facebook: '#3B82F6', Threads: '#1A1A1A', Dcard: '#0E7490' };
 
 const MONTH_TARGETS = { 4: 200, 5: 700, 6: 800 };
 const WEEKLY_TARGETS = {
