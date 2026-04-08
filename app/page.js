@@ -32,7 +32,7 @@ const CHANNELS = [
 
 const GROUPS = ['APP', 'IG', 'Facebook', 'Threads', 'Dcard'];
 const GROUP_COLORS = { APP: '#C5D86D', IG: '#FFB6C1', Facebook: '#93B5E0', Threads: '#A09888', Dcard: '#A5B8C7' };
-const GROUP_TEXT_COLORS = { APP: '#3D4A1C', IG: '#7A2836', Facebook: '#1E3A5F', Threads: '#333333', Dcard: '#2C4A5A' };
+const GROUP_TEXT_COLORS = { APP: '#ffffff', IG: '#ffffff', Facebook: '#ffffff', Threads: '#ffffff', Dcard: '#ffffff' };
 
 const MONTH_TARGETS = { 4: 200, 5: 700, 6: 800 };
 const WEEKLY_TARGETS = {
