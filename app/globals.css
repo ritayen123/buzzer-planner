@@ -1,24 +1,29 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-  --app-green: #C5D86D;
-  --app-green-light: #e8f0c8;
-  --ig-pink: #FFB6C1;
-  --ig-pink-light: #ffe4e8;
-  --fb-blue: #93B5E0;
+  --brand-green: #84AF4D;
+  --brand-green-dark: #6B8F3E;
+  --brand-green-light: #d6e8bc;
+  --brand-yellow: #FCC71D;
+  --brand-yellow-light: #FFF5D4;
+  --brand-orange: #FFAA00;
+  --brand-red: #E45F2B;
+  --ig-pink: #E45F2B;
+  --ig-pink-light: #fde8e1;
+  --fb-blue: #3B82F6;
   --fb-blue-light: #dce8f5;
-  --threads-gray: #A09888;
-  --threads-gray-light: #e8e4df;
-  --dcard-steel: #A5B8C7;
-  --dcard-steel-light: #dce5ec;
+  --threads-dark: #1A1A1A;
+  --threads-dark-light: #e0e0e0;
+  --dcard-teal: #0E7490;
+  --dcard-teal-light: #d4eef5;
   --bg: #faf9f6;
   --card: #ffffff;
-  --border: #e8e5df;
-  --text: #3a3a3a;
-  --text-light: #8a8a8a;
-  --success: #7BB86F;
-  --warning: #E8A952;
-  --danger: #D96B6B;
+  --border: #E3E3E3;
+  --text: #1A1A1A;
+  --text-light: #6b6b6b;
+  --success: #84AF4D;
+  --warning: #FFAA00;
+  --danger: #E45F2B;
 }
 
 body {
@@ -31,7 +36,7 @@ body {
 
 /* Header */
 .header {
-  background: linear-gradient(135deg, #b8cc5a, #C5D86D, #d4e28a);
+  background: linear-gradient(135deg, #6B8F3E, #84AF4D, #9BC05E);
   color: white;
   padding: 18px 28px;
   display: flex;
@@ -71,7 +76,7 @@ body {
 }
 
 .header-nav button:hover { background: rgba(255,255,255,0.45); }
-.header-nav button.active { background: white; color: #7a8c35; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.header-nav button.active { background: var(--brand-yellow); color: #1A1A1A; box-shadow: 0 2px 8px rgba(0,0,0,0.1); font-weight: 700; }
 
 /* Status bar */
 .status-bar {
@@ -120,9 +125,9 @@ body {
   letter-spacing: 2px;
 }
 
-.month-label.apr { background: linear-gradient(135deg, #9aab42, #7B9E3C); }
-.month-label.may { background: linear-gradient(135deg, #6d9e42, #5B8C3C); }
-.month-label.jun { background: linear-gradient(135deg, #4d8e42, #3B7C3C); }
+.month-label.apr { background: linear-gradient(135deg, #84AF4D, #6B8F3E); }
+.month-label.may { background: linear-gradient(135deg, #6B8F3E, #567832); }
+.month-label.jun { background: linear-gradient(135deg, #567832, #456228); }
 
 .week-row {
   display: grid;
@@ -140,9 +145,9 @@ body {
 }
 
 .week-label.current {
-  background: linear-gradient(180deg, #FFF9C4, #FFF3A0);
-  border-color: #E8CC4D;
-  box-shadow: inset 0 -2px 0 #E8CC4D;
+  background: linear-gradient(180deg, var(--brand-yellow-light), #FFEFAA);
+  border-color: var(--brand-yellow);
+  box-shadow: inset 0 -2px 0 var(--brand-yellow);
 }
 
 .week-label small {
@@ -237,7 +242,7 @@ body {
 }
 
 .task-cell:hover { background: #fdfcf9; }
-.task-cell.current-week { background: #FFFDE7; }
+.task-cell.current-week { background: var(--brand-yellow-light); }
 
 .task-card {
   background: linear-gradient(135deg, #f9f8f5, #f3f2ee);
@@ -255,8 +260,8 @@ body {
 }
 
 .task-card:hover {
-  border-color: var(--app-green);
-  box-shadow: 0 2px 6px rgba(197,216,109,0.3);
+  border-color: var(--brand-green);
+  box-shadow: 0 2px 6px rgba(132,175,77,0.3);
   transform: translateY(-1px);
 }
 
@@ -279,9 +284,9 @@ body {
 }
 
 .add-task-btn:hover {
-  border-color: var(--app-green);
-  color: #7a8c35;
-  background: var(--app-green-light);
+  border-color: var(--brand-green);
+  color: var(--brand-green-dark);
+  background: var(--brand-green-light);
 }
 
 /* Modal */
@@ -342,8 +347,8 @@ body {
 .modal-content input:focus,
 .modal-content textarea:focus {
   outline: none;
-  border-color: var(--app-green);
-  box-shadow: 0 0 0 3px rgba(197,216,109,0.3);
+  border-color: var(--brand-green);
+  box-shadow: 0 0 0 3px rgba(132,175,77,0.3);
 }
 
 .modal-actions {
@@ -363,10 +368,10 @@ body {
   transition: all 0.2s;
 }
 
-.btn-primary { background: var(--app-green); color: #3a4a15; }
-.btn-primary:hover { background: #b8cc5a; box-shadow: 0 2px 8px rgba(197,216,109,0.4); }
+.btn-primary { background: var(--brand-green); color: #ffffff; }
+.btn-primary:hover { background: var(--brand-green-dark); box-shadow: 0 2px 8px rgba(132,175,77,0.4); }
 .btn-danger { background: var(--danger); color: white; }
-.btn-danger:hover { background: #c55a5a; }
+.btn-danger:hover { background: #c94e1f; }
 .btn-ghost { background: transparent; color: var(--text-light); border: 1px solid var(--border); }
 .btn-ghost:hover { background: #f5f3ee; }
 
@@ -389,7 +394,7 @@ body {
   font-size: 17px;
   margin-bottom: 18px;
   padding-bottom: 10px;
-  border-bottom: 2px solid var(--app-green);
+  border-bottom: 2px solid var(--brand-green);
   font-weight: 700;
 }
 
@@ -436,20 +441,20 @@ body {
 .metrics-table input:hover { border-color: var(--border); }
 .metrics-table input:focus {
   outline: none;
-  border-color: var(--app-green);
+  border-color: var(--brand-green);
   background: white;
-  box-shadow: 0 0 0 2px rgba(197,216,109,0.2);
+  box-shadow: 0 0 0 2px rgba(132,175,77,0.2);
 }
 
 .metrics-table .target-row td {
-  background: var(--app-green-light);
+  background: var(--brand-green-light);
   font-size: 12px;
   color: var(--text-light);
   padding: 6px 8px;
 }
 
-.metrics-table td.above-target { background: #edf5e8; }
-.metrics-table td.below-target { background: #f5e8e8; }
+.metrics-table td.above-target { background: #e4f0d5; }
+.metrics-table td.below-target { background: #fde8e1; }
 
 /* Insights */
 .insight-card {
@@ -460,10 +465,10 @@ body {
   line-height: 1.6;
 }
 
-.insight-card.success { background: #edf5e8; border-left: 4px solid var(--success); }
-.insight-card.warning { background: #fdf3e4; border-left: 4px solid var(--warning); }
-.insight-card.danger { background: #f5e8e8; border-left: 4px solid var(--danger); }
-.insight-card.info { background: #e8eef5; border-left: 4px solid var(--fb-blue); }
+.insight-card.success { background: #e4f0d5; border-left: 4px solid var(--success); }
+.insight-card.warning { background: #fff5d9; border-left: 4px solid var(--warning); }
+.insight-card.danger { background: #fde8e1; border-left: 4px solid var(--danger); }
+.insight-card.info { background: var(--brand-yellow-light); border-left: 4px solid var(--brand-yellow); }
 
 .insight-label {
   font-weight: 700;
@@ -494,7 +499,7 @@ body {
 .kpi-card .kpi-value {
   font-size: 36px;
   font-weight: 800;
-  color: #7a8c35;
+  color: var(--brand-green-dark);
 }
 
 .kpi-card .kpi-label {

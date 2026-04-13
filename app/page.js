@@ -17,21 +17,21 @@ const WEEKS = [
 ];
 
 const CHANNELS = [
-  { id: 'app-push', name: 'PUSH 推播', group: 'APP', color: '#8B9E3C' },
-  { id: 'app-banner', name: 'Banner', group: 'APP', color: '#8B9E3C' },
-  { id: 'app-task', name: '上架任務', group: 'APP', color: '#8B9E3C' },
-  { id: 'app-shop', name: '商城商品', group: 'APP', color: '#8B9E3C' },
-  { id: 'app-game', name: '遊戲', group: 'APP', color: '#8B9E3C' },
-  { id: 'app-code', name: '序號發放', group: 'APP', color: '#8B9E3C' },
-  { id: 'ig-post', name: '貼文', group: 'IG', color: '#E84073' },
-  { id: 'ig-story', name: 'Story', group: 'IG', color: '#E84073' },
+  { id: 'app-push', name: 'PUSH 推播', group: 'APP', color: '#84AF4D' },
+  { id: 'app-banner', name: 'Banner', group: 'APP', color: '#84AF4D' },
+  { id: 'app-task', name: '上架任務', group: 'APP', color: '#84AF4D' },
+  { id: 'app-shop', name: '商城商品', group: 'APP', color: '#84AF4D' },
+  { id: 'app-game', name: '遊戲', group: 'APP', color: '#84AF4D' },
+  { id: 'app-code', name: '序號發放', group: 'APP', color: '#84AF4D' },
+  { id: 'ig-post', name: '貼文', group: 'IG', color: '#E45F2B' },
+  { id: 'ig-story', name: 'Story', group: 'IG', color: '#E45F2B' },
   { id: 'facebook', name: 'Facebook', group: 'Facebook', color: '#3B82F6' },
   { id: 'threads', name: 'Threads', group: 'Threads', color: '#1A1A1A' },
   { id: 'dcard', name: 'Dcard', group: 'Dcard', color: '#0E7490' },
 ];
 
 const GROUPS = ['APP', 'IG', 'Facebook', 'Threads', 'Dcard'];
-const GROUP_COLORS = { APP: '#C5D86D', IG: '#FFB6C1', Facebook: '#93B5E0', Threads: '#A09888', Dcard: '#A5B8C7' };
+const GROUP_COLORS = { APP: '#84AF4D', IG: '#E45F2B', Facebook: '#3B82F6', Threads: '#1A1A1A', Dcard: '#0E7490' };
 const GROUP_TEXT_COLORS = { APP: '#ffffff', IG: '#ffffff', Facebook: '#ffffff', Threads: '#ffffff', Dcard: '#ffffff' };
 
 const MONTH_TARGETS = { 4: 200, 5: 700, 6: 800 };
@@ -296,7 +296,7 @@ export default function Home() {
               <div key={w.num} className={`week-label ${w.num === currentWeek ? 'current' : ''}`}>
                 {w.label}
                 <small>{w.dates}</small>
-                {w.num === 6 && <small style={{color: '#f44336', fontWeight: 600}}>群益上線</small>}
+                {w.num === 6 && <small style={{color: '#E45F2B', fontWeight: 600}}>群益上線</small>}
               </div>
             ))}
           </div>
@@ -380,7 +380,7 @@ export default function Home() {
               for (let w = 1; w <= currentWeek; w++) expectedTotal += WEEKLY_TARGETS[w];
               const targetTotal = 1700;
               const progress = Math.min(totalNew / targetTotal * 100, 100);
-              const progressColor = totalNew >= expectedTotal ? '#4CAF50' : totalNew >= expectedTotal * 0.7 ? '#FF9800' : '#f44336';
+              const progressColor = totalNew >= expectedTotal ? '#84AF4D' : totalNew >= expectedTotal * 0.7 ? '#FFAA00' : '#E45F2B';
 
               return (
                 <>
@@ -403,7 +403,7 @@ export default function Home() {
                     <div className="progress-bar">
                       <div className="progress-fill" style={{
                         width: `${tasks.filter(t => t.week <= currentWeek).length > 0 ? tasks.filter(t => t.week <= currentWeek && t.completed).length / tasks.filter(t => t.week <= currentWeek).length * 100 : 0}%`,
-                        background: '#7B9E3C'
+                        background: '#84AF4D'
                       }}></div>
                     </div>
                     <div className="kpi-target">已完成/總計（至本週）</div>
@@ -449,7 +449,7 @@ export default function Home() {
                     const memberClass = m.newMembers !== undefined && m.newMembers !== '' ? (newMembers >= target ? 'above-target' : 'below-target') : '';
 
                     return (
-                      <tr key={w.num} style={w.num === currentWeek ? {background: '#FFFDE7'} : {}}>
+                      <tr key={w.num} style={w.num === currentWeek ? {background: '#FFF5D4'} : {}}>
                         <td className="week-col">
                           {w.label}
                           <br/><span style={{fontSize: 11, fontWeight: 400, color: '#888'}}>{w.dates}</span>
